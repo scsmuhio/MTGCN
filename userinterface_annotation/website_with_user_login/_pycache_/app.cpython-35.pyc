@@ -1,0 +1,92 @@
+
+
+–’É]j(  ã            
+   @   sá  d  d l  m Z m Z m Z m Z m Z m Z m Z m Z d  d l	 Z
+ d  d l Z d  d l Z d  d l
+ m Z d Z e e ƒ Z d e _ g  Z d d d d	 d
+ d d d
+ d d i Z g  Z g  Z d d „  Z d d „  Z d d „  Z e j d d d d g ƒe d d „  ƒ ƒ Z e j d ƒ d d „  ƒ Z e j d d d d g ƒe d  d! „  ƒ ƒ Z e j d" ƒ e d# d$ „  ƒ ƒ Z e j d% d d d g ƒe d& d' „  ƒ ƒ Z e j  d( ƒ d) d* „  ƒ Z! e d+ k rÝe j" d, d- ƒ d S).é    )ÚFlaskÚrender_templateÚrequestÚurl_forÚredirectÚsessionÚabortÚflashN)Úwrapsz1/home/chinni/PycharmProjects/Honours/miniproject/ZcharanZuser1Z1001Zuser2Z2002Zuser3Z3003Zuser4Z4004Zuser5Z5005c             C   s5   x. t  D]& } | |  k r t  | | k r d Sq Wd S)NZcorrectÚ	incorrect)Ú	user_dict)ÚusernameÚpasswdÚl© r   ú\/home/chinni/PycharmProjects/Honours/userinterface_annotation/Website_with_user_login/app.pyÚcheck_userlogins&   s    
+r   c                s"   t  ˆ  ƒ ‡  f d d †  ƒ } | S)Nc                 sf   t  d |  | ƒ t  ˆ  ƒ t d rH t d | d k rb ˆ  |  | Ž  Sn t d ƒ t t d ƒ ƒ Sd  S)Nzargs,kwargsÚloginr
+   zYou need to login firstÚindex)Úprintr   r	   r   r   )ÚargsÚkwargs)Úfr   r   Úwrap-   s    
+
+
+zlogin_required.<locals>.wrap)r
+   )r   r   r   )r   r   Úlogin_required,   s    
+r   c                s"   t  ˆ  ƒ ‡  f d d †  ƒ } | S)Nc                 s[   d t  k r ˆ  |  | Ž  Sd t  k r= t  d r= ˆ  |  | Ž  St t d d t  d ƒƒ Sd  S)Nr   Úgenrer
+   )r   r   r   )r   r   )r   r   r   r   =   s
+    
+
+zlogout_required.<locals>.wrap)r
+   )r   r   r   )r   r   Úlogout_required<   s    
+r   ú/ÚmethodsÚPOSTÚGETc              C   s¹   d  }  d t  k r6 t  d r6 t t d d t  d ƒƒ t j d k r© t t j d t j d ƒ d k rq d }  n8 d t  d <t j d t  d <t t d d t j d ƒƒ St d	 d
+ |  ƒS)Nr   r   r
+   r   Úpasswordr   z%Invalid Credentials,Please try again.Tz	main.htmlÚerror)r   r   r   r   Úmethodr   Úformr   )r"   r   r   r   r   J   s    #	
+r   z/logout/c              C   s|   yB t  d r1 t  d d k r1 d t  d <d t  d <t t d ƒ ƒ SWn3 t k
+ rw }  z t |  ƒ d SWYd  d  }  ~  Xn Xd  S)Nr   r
+   Ú Fr   Zhello)r   r   r   Ú	Exceptionr   )Úer   r   r   Úlogout^   s    
+
+
+r(   z/<username>/c             C   sÇ   y |  d k r d Sd  } t  d rŒ t  d |  k rŒ g  } | j t |  ƒ ƒ | j t t j t t |  ƒ ƒ ƒ d ƒ t d d | d | ƒSWn3 t k
+ rÂ } z t	 | ƒ d	 SWYd  d  } ~ Xn Xd  S)
+Nzfavicon.icoZfavir   r
+   é   z
+Genre.htmlZ
+genre_foldersr"   z*Please login agian,some error has happened)
+r   ÚappendÚstrÚnextÚosÚwalkÚurl_pathr   r&   r   )r
+   r"   Ú	GenreListr'   r   r   r   r   l   s    *
+r   z/<username>/<genre>/c             C   sÂ   yŒ t  d r‹ t  d |  k r‹ |  } g  } | j | ƒ | j | ƒ | j t t j t t | ƒ d t | ƒ ƒ ƒ d ƒ t d d | ƒSWn/ t k
+ r½ } z t	 | ƒ WYd  d  } ~ Xn Xd S)Nr   r
+   r   é   z
+Files.htmlZlistoffilesZherl)
+r   r*   r,   r-   r.   r/   r+   r   r&   r   )r
+   r   ÚfolderZ
+Files_listr'   r   r   r   Úfile€   s    
+
+8r3   z/<username>/<genre>/<file>/c             C   s  yút  d s t t d ƒ ƒ St j d k ród | k rò t t |  ƒ d t | ƒ d t | ƒ } d d d d	 d
+ d d g } t j | d
+ d d | d d  ƒ} t j	 d dH ƒ | d j j
+ ƒ  | d <t d d | j d d ƒ g d | j
+ j ƒSd t  d <g  } t t |  ƒ d t | ƒ d t | ƒ } t j | d
+ d ƒ} | d } | d } x^ t d t | ƒ ƒ D]G }	 | j |	 d f d k rš|	 t  d <Pqm|	 t | ƒ d k rmd SqmWt t  d d |  ƒ t | ƒ t  d }
+ t  d t | ƒ k  súd SxÚ t t  d t  d d ƒ D]½ } d d d  d! d" g d d# d$ d% d& d' g d	 d( d' g d
+ d( d' g d d( d' g d) d* i } | t | ƒ k r†P| j | }
+ | j | } | j d) |
+ i ƒ | j d+ | i ƒ | j | ƒ qWt d, d- | d. |  d/ |
+ ƒSg  } g  } g  } g  } g  } g  } g  } t t j d0 ƒ } xbt d | d ƒ D]M} y| j t j j d1 t | ƒ ƒ d ƒ | j t j j d2 t | ƒ ƒ d ƒ | j t j j d3 t | ƒ ƒ d ƒ | j t j j d4 t | ƒ ƒ d ƒ | j t j j d5 t | ƒ ƒ d ƒ | j t j j d6 t | ƒ ƒ d ƒ | j t j j d7 t | ƒ ƒ d ƒ WqDt k
+ r} z t | ƒ WYd  d  } ~ XqDXqDWt t |  ƒ d t | ƒ d t | ƒ } t t |  ƒ d t | ƒ d t d8 | ƒ } t j | d
+ d ƒ} | d } | d } d } t t  d d9 |  ƒ g  } x† t t  d t  d | ƒ D]i } | t | ƒ k roP| | d: k r•d; | j | d f <n d | j | d f <| d } | j | ƒ qVWd< | d | d= | d> | d? | d@ | dA | dB | i } t j | dC d< d d= d> d? d@ dA dB g ƒ} t | dD ƒ   } | j | d dE d dE ƒWd  QRX| j | d dE ƒg  } x^ t d t | ƒ ƒ D]G }	 | j |	 d f d k r´|	 t  d <Pq‡|	 t | ƒ d k r‡d Sq‡Wt | ƒ t  d }
+ t  d t | ƒ k  rõxÚ t t  d t  d d ƒ D]½ } d d d  d! d" g d d# d$ d% d& d' g d	 d( d' g d
+ d( d' g d d( d' g d) d* i } | t | ƒ k rˆP| j | }
+ | j | } | j d) |
+ i ƒ | j d+ | i ƒ | j | ƒ qWt d, d- | d. |  d/ |
+ ƒSdF SWn€ t k
+ r|} z` t | ƒ g  } | j |  ƒ | j t t j t |  ƒ ƒ d ƒ t t dG d. t  d. ƒƒ SWYd  d  } ~ Xn Xd  S)INr   r   r    Z	Annotatedr   ZSentenceZ	SentimentZEmotionZ
+HatespeechZ	ClickbaitZSarcasmZTextBoxÚ	delimiterú,ÚnamesÚheaderZmax_colwidthr)   zresults.htmlÚtablesÚclassesÚdataZtitlesr   ÚitemÚkeyÚcheckedzsentences are completedzGET Requesté   ÚposÚnegZneutralÚcompZhappyZsadZangerZfearÚnoÚyesZsentencer%   Ú	key_valuezViewsentences.htmlZlist_sentencesr
+   Znum_remZlength_sentencesZ
+sentence_nameZsentiment_optionZemotion_optionZhatespeech_optionZclickbait_optionZsarcasm_optionZ	text_dataZ
+Annotated_zPOST RequestÚNoner1   ZIdZ	sentimentZemotionZ
+hatespeechZ	clickbaitZsarcasmZtextboxÚcolumnsÚaFzSentences are completedr   éÿÿÿÿ) r   r   r   r   r#   r/   r+   ÚpdZread_csvZ
+set_optionÚstripr   Zto_htmlrF   ÚvaluesÚrangeÚlenZatr   ÚlocÚupdater*   Úintr$   Úgetlistr&   Z	DataFrameÚopenZto_csvr,   r-   r.   )r
+   r   r3   Ú	file_pathZ
+title_listZdfZlisÚ	sentencesÚkeysÚiZnum_rem_sentencesÚkÚoptionsÚrowr<   Z
+lis_sentencesZsentiment_responseZemotion_responseZhatespeech_responseZclickbait_responseZsarcasm_responseZ
+text_responseÚlengthr'   Z
+new_file_pathÚpZlis_idÚrecordZ	dataframer   r0   r   r   r   rT      sâ    
+,!+
+,
+
+
+"W
+
+''''''+!,0
+
+"
+- 
+"
+
+
+
+$rT   i”  c             C   s
+   t  d ƒ S)Nz404.html)r   )r'   r   r   r   Úpage_not_found  s    r]   Ú__main__Úhostz0.0.0.0)#Úflaskr   r   r   r   r   r   r   r	   ZpandasrI   Zcsvr-   Ú	functoolsr
+   r/   Ú__name__ÚappÚ
+secret_keyZlist_genresr   Zuser_loginsZ	user_datar   r   r   Úrouter   r(   r   r3   rT   Úerrorhandlerr]   Úrunr   r   r   r   Ú<module>   s4   :	$
