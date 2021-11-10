@@ -15,6 +15,7 @@ This repository contains the code and the dataset used.
 ### Code
 * All the required files were there in the *Code* folder.
 
+### Word Embedding Details
 <details>
 <summary>Word Embeddings</summary>
 	
@@ -26,6 +27,7 @@ This repository contains the code and the dataset used.
 * [Meta-Embeddings](#meta-embeddings)
 </details>
 
+### User Interface Details
 <details>
 <summary>User Interface for Annotation</summary>
 
