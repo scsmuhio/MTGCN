@@ -4,7 +4,7 @@
 This repository contains the code and the dataset used.
 
 ### Dataset
-* *Data.xlsx* file has the required data
+* Data folder contains the details regarding dataset.
 * Different columns in the dataset are as follows : {Sentence, Sentiment, Emotion, Hatespeech, Sarcasm}
 * Sentiment Labels: {"pos":Positive, "neg":Negative}
 * Emotion Labels: {"happy". "sad", "fear" ,"anger"}
