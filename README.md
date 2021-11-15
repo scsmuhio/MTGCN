@@ -6,10 +6,10 @@ This repository contains the code and the dataset used.
 ### Dataset
 * Data folder contains the details regarding dataset. Two files will be there. The sa_task.csv file have the sentiment, hatespeech and sarcasm data. The ea_task.csv has emotion data.
 * Sentiment Labels: {"pos":Positive, "neg":Negative}
-* Emotion Labels: {"happy". "sad", "fear" ,"anger"}
+* Emotion Labels: {"happy", "sad", "fear" ,"anger"}
 * Hatespeech Labels: {"yes", "no"}
 * Sarcasm Labels: {"yes", "no"}
-* Lexcions: Additional information on a sentence in which the particular labels  were given.
+* Lexcions: Lexicon is a word that contribute to that particular task label. 
 
 ### Code
 * All the required files were there in the *Code* folder.
