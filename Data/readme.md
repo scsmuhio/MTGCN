@@ -1,7 +1,6 @@
 ### Dataset
-* Dataset for sentiment task (sa_task): We considered the dataset of only 'pos' and 'neg' label sentiments, corresponding emotion, hatespeech and sarcasm labels of the sentence are also present.
-* Dataset for sentiment task (ei_task): We considered the dataset of only 'happy', 'sad', 'anger' and 'fear' label emotions, corresponding sentiment, hatespeech and sarcasm labels of the sentence are also present.
-* Different columns in the dataset are as follows : {Sentence, Sentiment, Emotion, Hatespeech, Sarcasm}
+* sa_task.csv: The columns in this file are sentence, sentiment label, hatespeech label, and sarcasm label.
+* ei_task.csv: The columns in this file are sentence and emotion column.
 * Sentiment Labels: {"pos":Positive, "neg":Negative}
 * Emotion Labels: {"happy". "sad", "fear" ,"anger"}
 * Hatespeech Labels: {"yes", "no"}
