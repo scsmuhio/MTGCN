@@ -15,7 +15,7 @@ This repository contains the code and the dataset used.
 * All the required files were there in the *Code* folder.
 
 <details>
-<summary>Word Embeddings</summary>
+<summary>Telugu Word Embeddings</summary>
 	
 * [BOW](#bow)
 * [TF-IDF](#tf-idf)
